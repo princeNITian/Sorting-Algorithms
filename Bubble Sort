@@ -1,0 +1,36 @@
+//C program to sort Array elements using Bubble Sort Algorithm.
+/*In Bubble Sort, We start from first two element, and swap it if necessary to maintain some logical order. Then, we compare second with 
+third element and swap it, if necessary.Then, fourth and fifth is compared and so on, at last we reach to (n-1)th element and we compare it
+with nth element and swap it, if necessary.So,This is our first run. Now, In second run we start from second and third element and do the
+same procedure and reach to (n-1)th element and compare it with nth element. So, following this run we complete it till (n-1)th run. This 
+will be our last run where we compare (n-1)th element with nth element.
+*/
+
+#include  <stdio.h>
+
+int main()
+{
+    int data[100],n,temp,i,j;
+    printf("Enter the Array size(less than 100): ");
+    scanf("%d",&n);
+    printf("Enter Array Elements:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&data[i]);
+    }
+        for(j=0;j<n-1;j++){
+            for(i=0;i<n-j-1;i++){
+                if(data[i]>data[i+1]){
+                    temp=data[i];
+                    data[i]=data[i+1];
+                    data[i+1]=temp;
+                }
+            }
+        }
+    printf("Elements In ascending order: \n");
+    for(i=0;i<n;i++)
+        printf("%d\t",data[i]);
+   
+    
+    return 0;
+}
