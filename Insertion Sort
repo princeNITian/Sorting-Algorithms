@@ -1,0 +1,28 @@
+//C program to sort array using Insertion sort Algorithm.
+#include  <stdio.h>
+
+int main(void)
+{
+    int data[100],n,temp,i,j;
+    printf("Enter the Array size(less than 100): ");
+    scanf("%d",&n);
+    printf("Enter Array Elements:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&data[i]);
+        temp = data[i];
+        j=i-1;
+        while(temp<data[j] && j>=0)
+        {
+            data[j+1]=data[j];
+            j--;
+        }
+        data[j+1]=temp;
+    }
+    printf("Elements In ascending order: \n");
+    for(i=0;i<n;i++)
+        printf("%d\t",data[i]);
+   
+    
+    return 0;
+}
