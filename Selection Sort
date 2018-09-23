@@ -1,0 +1,37 @@
+//C progam to sort an array in ascending order using Selection sort Algorithm.
+/*In Selection sort Algorithm, we start from first two element, we compare it and swap the value to maintain our logical manner, if necessary.
+Then we move to third element and compare it with first element and swap it if necessary, then fourth element is compared with the first and
+so on we reach to nth element and compare it with the first element and swap it if necessary.In the next run we compare the second element 
+with the next elements one by one and reach to nth element. Then we go for third run for third element,fourth run for fourth element and
+repeat the same process till we reach the nth element in every run. So By following this process in (n-1)th run we compare the (n-1)th
+element nth element and swap it if necessary.Now we have sorted Array.
+*/
+
+#include  <stdio.h>
+
+int main()
+{
+    int data[100],n,temp,i,j;
+    printf("Enter the Array size(less than 100): ");
+    scanf("%d",&n);
+    printf("Enter Array Elements:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&data[i]);
+    }
+        for(j=0;j<n;j++){
+            for(i=j;i<n;i++){
+                if(data[j]>data[i]){
+                    temp=data[j];
+                    data[j]=data[i];
+                    data[i]=temp;
+                }
+            }
+        }
+    printf("Elements In ascending order: \n");
+    for(i=0;i<n;i++)
+        printf("%d\t",data[i]);
+   
+    
+    return 0;
+}
