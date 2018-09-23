@@ -1,4 +1,9 @@
 //C program to sort array using Insertion sort Algorithm.
+/* In Insertion sort we start from the first two elements, then we compare these elements to arrange it in some logical manner
+i.e. ascending or descending, after it we go for third element and compare it with preceding two elements, and keep it in required 
+place, then we go for fourth element and so on we move to nth element and then compare it with its preceding (n-1)th element. 
+After Keeping it in required position, we get a sorted array in that logical manner.
+*/
 #include  <stdio.h>
 
 int main(void)
